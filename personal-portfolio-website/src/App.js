@@ -16,12 +16,12 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route index path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/resume' element={<Resume/>}/>
-        <Route path='/skills' element={<Skills/>}/>
-        <Route path='/portfolio' element={<Portfolio/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route index path='/Personal-portfolio' element={<Home/>}/>
+        <Route path='//Personal-portfolio/about' element={<About/>}/>
+        <Route path='/Personal-portfolio/resume' element={<Resume/>}/>
+        <Route path='/Personal-portfolio/skills' element={<Skills/>}/>
+        <Route path='/Personal-portfolio/portfolio' element={<Portfolio/>}/>
+        <Route path='/Personal-portfolio/contact' element={<Contact/>}/>
       </Routes>
     </div>
   );

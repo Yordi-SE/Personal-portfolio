@@ -13,34 +13,34 @@ function NavBar() {
   const data = [
     {
         label: "Home",
-        to: '/'
+        to: '/Personal-portfolio'
     },
     {
         label: "About",
-        to: '/about'
+        to: '/Personal-portfolio/about'
     },
     {
         label: "Skills",
-        to: '/skills'
+        to: '/Personal-portfolio/skills'
     },
     {
         label: "Resume",
-        to: '/resume'
+        to: '/Personal-portfolio/resume'
     },
     {
         label: "Portfolio",
-        to: '/portfolio'
+        to: '/Personal-portfolio/portfolio'
     },
     {
         label: "Contact",
-        to: '/contact'
+        to: '/Personal-portfolio/contact'
     }
   ]
   return (
     <div>
       <nav className="navbar">
         <div className="navbar_container">
-            <Link className="navbar_container_logo" to={'/'}>
+            <Link className="navbar_container_logo" to={'/Personal-portfolio'}>
                 <img src="./image4.jpg" width="30px"/>
             </Link>
         </div>
