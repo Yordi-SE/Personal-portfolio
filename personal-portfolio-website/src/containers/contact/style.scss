@@ -1,0 +1,106 @@
+.contact{
+    &_content{
+        padding: 20px;
+        &_header-text{
+            color: #333333;
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1em;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid #333333;
+        }
+        &_header-text::before,
+        &_header-text::after{
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 5px;
+            background-color: #333333;
+            bottom: -1px;
+        }
+        &_header-text::before{
+            left: 0;
+        }
+        &_header-text::after{
+            right: 0;
+        }
+        &_form{
+            margin-top: 30px;
+            &_controlswrapper{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                margin-bottom: 30px;
+                div {
+                    position: relative;
+                    .inputName, .inputEmail, .inputDescription{
+                        width: 100%;
+                        border: 2px solid #333333;
+                        padding: 16px 12px;
+                        transition: all 0.5s ease;
+                        position: relative;
+                        background-color: transparent;
+                        color: #333333;
+                    }
+                    .nameLabel,.emailLabel,.descriptionLabel{
+                        font-weight: 500;
+                        position: absolute;
+                        top: 7px;
+                        left: 12px;
+                        transition: all 0.2s ease;
+                        color: #333333;
+                        font-size: 16px;
+                    }
+                    .inputName:focus, .inputEmail:focus, .inputDescription:focus{
+                        outline: none;
+                    }
+                    .inputName:focus + .nameLabel,.inputName:valid + .nameLabel, .inputEmail:focus + .emailLabel,.inputEmail:valid + .emailLabel, .inputDescription:focus + .descriptionLabel,.inputDescription:valid + .descriptionLabel{
+                        font-size: 18px;
+                        top: -25px;
+                        left: 0px;
+                    }
+
+                }
+
+            }
+            button {
+                cursor: pointer;
+                padding: 10px 70px;
+                font-size: 2rem;
+                background: transparent;
+                color: #333333;
+                border: 1.5px solid #333333;
+                border-radius: 4px;
+                font-weight: 600;
+                &:hover{
+                    color: #000;
+                    background: #333333;
+                }
+            }
+
+        }
+        .handlesubmit{
+            color: #333333;
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1em;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .contact_content_form{
+        text-align: center;
+        &_controlswrapper{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
