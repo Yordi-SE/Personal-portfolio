@@ -7,7 +7,7 @@ import {Animate} from "react-simple-animate";
 function Home() {
   const navigate = useNavigate();
   const handleNavigateToContactMe = () => {
-    navigate('/contact')
+    navigate('/Personal-portfolio/contact')
   }
   return (
     <div>
