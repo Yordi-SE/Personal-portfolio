@@ -1,5 +1,13 @@
-.navbar{
+.navbar2 {
     background-color: #3498db;
+    color: #FFFFFF;
+}
+.navbar3 {
+    background-color: #282828;
+    color: #FFFFFF;
+}
+
+.navbar1{
     height: 80px;
     display: flex;
     justify-content: center;
@@ -46,19 +54,35 @@
                     background-color: #FFFFFF;
                 }
                 &_link{
-                    color: #FFFFFF;
                     text-decoration: none;
                     padding: 0.5rem;
+                    color: #FFFFFF;
+                }
+
+            }
+            button {
+                cursor: pointer;
+                padding: 10px 70px;
+                font-size: 2rem;
+                background: transparent;
+                color: #fff;
+                border: 1.5px solid #333333;
+                border-radius: 4px;
+                transition: 0.5s ease;
+                font-weight: 600;
+                &:hover{
+                    color: #333333;
+                    background: #fff;
                 }
             }
         }
     }
 }
-.nav-icon {
+.nav1-icon {
     display: none;
 }
 @media only screen and (max-width: 768px) {
-    .navbar_container_menu{
+    .navbar1_container_menu{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -80,7 +104,7 @@
         }
 
     }
-    .nav-icon {
+    .nav1-icon {
         display: block;
         cursor: pointer;
         color: var(--yellow-theme-main-color);

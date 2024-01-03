@@ -1,5 +1,4 @@
 .portfolio_content{
-    margin-bottom: 500px;
         &_cards{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -53,9 +52,13 @@
                         }
                     }
                 }
-                &:hover .overlay{
+                .overlay:hover{
                     opacity: 0.8;
+
                 }
+            }
+            .portfolio_content_cards_item:hover {
+                transform: scale(1.2);
             }
         }
 }
@@ -75,8 +78,6 @@
             grid-auto-rows: auto;
             gap: 4rem;
             margin: 20px;
-            min-width: 230px;
-            min-height: 366px;
         }
     }
 }
@@ -88,8 +89,6 @@
             grid-auto-rows: auto;
             gap: 4rem;
             margin: 20px;
-            margin-top: 20px;
-            max-height: 366px;
         }
     }
 }

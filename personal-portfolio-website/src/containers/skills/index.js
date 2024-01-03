@@ -1,44 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeaderContent from "../../components/pageHeader";
 import { BsInfoSquareFill } from "react-icons/bs";
 import { skillsData } from "./utils";
-import { Animate, AnimateKeyframes } from "react-simple-animate";
 import {Line} from "rc-progress";
+import { useSelector } from "react-redux";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 import "./style.scss";
 function Skills() {
+  const theme = useSelector(state => state.theme);
+  useEffect(() =>{
+    Aos.init({duration: 2000});
+  },[])
   return (
-    <div className="root">
-      <section id="root" className="skills">
-        <PageHeaderContent headerText={"My Skills"} icon={<BsInfoSquareFill size={40}/>}/>
+    <div>
+      <section  className={theme === 1 ? "skills3 skills" : "skills2 skills"}>
+        <PageHeaderContent headerText={"My Skills"} icon={<BsInfoSquareFill size={40}/>} idname="SKILLS"/>
         <div className="skills_content-wrapper">
           {
             skillsData.map((item,i) =>(
-              <div key={i} className="skills_content-wrapper_inner-content">
-                <Animate play duration={1} delay={0.3} start={{
-                  transform:'translateX(-200px)'
-                }}
-                end={{
-                  transform:'translatex(0)'
-                }}>
+              <div key={i} className="skills_content-wrapper_inner-content" data-aos="flip-right">
+
                   <h3 className="skills_content-wrapper_inner-content_category-text">{item.label}</h3>
                   <div>
                     {
                       item.data.map((skillItem, j)=>(
-                        <AnimateKeyframes play
-                        duration={1} keyframes={["opacity: 1", "opacity: 0"]} iterationCount={1}>
+
                           <div className="progressbar-wrapper" key={j}>
                             <p>{skillItem.skillName}</p>
                             <Line percent={skillItem.percentage} strokeWidth="2"
-                            strokeColor="#333333" trailWidth="2"
-                            trailColor="#3498db"
+                            strokeColor={theme === 1 ? "#333333" : "#3498db"} trailWidth="2"
+                            trailColor={theme === 1 ? "#3498db" : "red"}
                             strokeLinecap="square"/>
 
                           </div>
-                        </AnimateKeyframes>
                       ))
                     }
                   </div>
-                </Animate>
                 </div>
             ))
           }

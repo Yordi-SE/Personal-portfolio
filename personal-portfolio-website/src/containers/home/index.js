@@ -1,35 +1,50 @@
 import React from "react";
-import Particle from '../../utils/particles';
+import ParticlesContainer from '../../utils/particles';
+import { useEffect } from 'react';
 import "./styles.scss"
 import { useNavigate } from "react-router-dom";
 import {Animate} from "react-simple-animate";
+import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.0/+esm";
+import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.0/+esm";
+import { HashLink } from "react-router-hash-link";
+
 
 function Home() {
-  const navigate = useNavigate();
-  const handleNavigateToContactMe = () => {
-    navigate('/Personal-portfolio/contact')
-  }
+  // const handleNavigateToContactMe = () => {
+  //   navigate('#CONTACT')
+  // }
+
+  // tsParticles.useEffect(  useEffect(() => {
+    
+
+  //   loadParticles(configs)
+  //   return () => {
+  //     // tsParticles.destroy(s)
+      
+  // }}, []));
+  
   return (
-    <div>
-        <section id="home" className="home">
-          <div className="home_text-wrapper">
-            <h1>
+    <div id="HOMEE">
+        <section id="homee" className="homee">
+          <div className="homee_text-wrapper">
+            <h1 className="homee_text-wrapper_header">
               Hello, I'm Yordanos
               <br />
-              Front end Developer
+              Frontend Developer
             </h1>
           </div>
-          <Animate play duration={2.5} delay={0} start={{
+          <Animate  play duration={2.5} delay={0} start={{
             transform: 'translateX(700px)'
           }}
           end={{
             transform: 'translateY(0)'
           }}>
-            <button onClick={handleNavigateToContactMe}>Hire me</button>
+            <HashLink to="#CONTACT"><button>Hire me</button></HashLink>
           </Animate>
 
         </section>
-        <Particle />
+        <ParticlesContainer />
+
     </div>
   )
 }

@@ -4,8 +4,17 @@ import { Link } from "react-router-dom";
 import {HiX} from 'react-icons/hi';
 import './style.scss';
 import image from "../../images/image4.jpg";
+import {HashLink} from 'react-router-hash-link';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import theme_action from "../../redux/action";
+
+
 
 function NavBar() {
+    const theme = useSelector(state => state.theme)
+    console.log(theme)
+    const dispatch = useDispatch()
     const [toggleIcon, setToggleIcon] = useState(false);
     const handleToggleIcon = ()=> {
         setToggleIcon(!toggleIcon);
@@ -13,51 +22,52 @@ function NavBar() {
   const data = [
     {
         label: "Home",
-        to: '/Personal-portfolio'
+        to: '#HOME'
     },
     {
         label: "About",
-        to: '/Personal-portfolio/about'
+        to: '#ABOUT'
     },
     {
         label: "Skills",
-        to: '/Personal-portfolio/skills'
+        to: '#SKILLS'
     },
     {
         label: "Resume",
-        to: '/Personal-portfolio/resume'
+        to: '#RESUME'
     },
     {
         label: "Portfolio",
-        to: '/Personal-portfolio/portfolio'
+        to: '#PORTFOLIO'
     },
     {
         label: "Contact",
-        to: '/Personal-portfolio/contact'
+        to: '#CONTACT'
     }
   ]
   return (
     <div>
-      <nav className="navbar">
-        <div className="navbar_container">
-            <Link className="navbar_container_logo" to={'/Personal-portfolio'}>
+      <nav className={theme === 1 ? "navbar1 navbar2" : "navbar1 navbar3"}>
+        <div className="navbar1_container">
+            <Link className="navbar1_container_logo" to={'/Personal-portfolio'}>
                 <img src="./image4.jpg" width="30px"/>
             </Link>
         </div>
-        <ul className={`navbar_container_menu ${toggleIcon ? "active": ''}`}>
+        <ul className={`navbar1_container_menu ${toggleIcon ? "active": ''}`}>
             {
                 data.map((item) => {
                     return (
-                        <li key={item.label} className="navbar_container_menu_items">
-                            <Link className="navbar_container_menu_items_link" to={item.to}>
+                        <li key={item.label} className="navbar1_container_menu_items">
+                            <HashLink className="navbar1_container_menu_items_link" to={item.to}>
                                 {item.label}
-                            </Link>
+                            </HashLink>
                         </li>
                     )
                 })
             }
+            <button onClick={() => dispatch(theme_action())}>Change Theme</button>
         </ul>
-        <div className="nav-icon" onClick={handleToggleIcon}>
+        <div className="nav1-icon" onClick={handleToggleIcon}>
             {
                 toggleIcon ? <HiX size={30}/> : <FaBars size={30}/>
             }

@@ -1,9 +1,12 @@
 import { useCallback } from "react";
+import { useSelector } from "react-redux";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 const App = () => {
+    const theme = useSelector(state => state.theme)
+    const back = theme === 1 ? "#000033" : "#282828"
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -22,17 +25,23 @@ const App = () => {
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
+            width="100%"
+            height={"100vh"}
             options={{
+                fullScreen: {
+                    enable: false,
+                    zIndex: -1
+                  },
                 background: {
                     color: {
-                        value: "#000033",
+                        value: back,
                     },
                 },
                 fpsLimit: 120,
                 interactivity: {
                     events: {
                         onClick: {
-                            enable: true,
+                            enable: false,
                             mode: "push",
                         },
                         onHover: {

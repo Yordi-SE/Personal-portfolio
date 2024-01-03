@@ -1,0 +1,167 @@
+.countainer1 {
+    background-image: url('./Green-Background-Resume-Template.webp');
+
+}
+.countainer2 {
+    background-color: #282828;
+}
+.countainer {
+    display: flex;
+    flex-direction: column;
+
+}
+.bloc-tabs {
+    display: flex;
+    padding-left: 30px;
+    gap: 30px;
+    width: 100%;
+}
+.tabs2 {
+    background: white;
+    color: #222;
+}
+.tabs{
+    height: 100px;
+    width: 200px;
+    border: 2px solid #222;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px black;
+    transition: 0.5s ease;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+
+}
+.tabs:not(:last-child){
+    border-right: 1px solid rgba(0,0,0,0.274);
+}
+.active-tabs {
+    background: rgb(47, 7, 83);
+    border-bottom: 1px solid transparent;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #f5f5ff;
+}
+button {
+    border: none;
+}
+.content-tabs {
+    flex-grow: 1;
+}
+.content {
+    background-image: url(R.jpg);
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #222;
+    display: none;
+    color: floralwhite;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 40px;
+}
+.content h2 {
+    padding: 0px 0 5px 0px;
+}
+.content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+}
+.content p, .ul, .ul_wrapper, .ul_wrapper2{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 2rem;
+    white-space: wrap;
+
+}
+
+.ul {
+    line-height: 30px;
+    padding-left: 40px;
+    list-style-type: square;
+}
+.active-content {
+    display: block;
+}
+.ul_wrapper, .ul_wrapper2{
+    height: 95%;
+    color: #f5f5ff;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+.list_wrapper, .list_wrapper2 {
+    padding: 30px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    list-style-type: none;
+}
+.ul{
+    text-align: left;
+}
+.active-content {
+    position: relative;
+    left: 0; /* Starting position */
+    animation: slideLeft 2s cubic-bezier(0.4, 0, 0.2, 1) 1; /* Use the defined keyframes, duration, timing function, and repetition */
+  }
+  
+  /* Define the animation keyframes */
+  @keyframes slideLeft {
+    0% {
+      left: 50%; /* Starting position */
+    }
+    100% {
+      left: 0%; /* Move the element to the left by 100% of its own width */
+    }
+  }
+  @media only screen and (max-width: 768px) and (min-width: 321px) {
+    .content {
+        width: 90%;
+    }
+    .ul_wrapper{
+        flex-direction: column;
+    }
+    .bloc-tabs{
+        gap: 0px;
+        padding: 0;
+    }
+    .tabs{
+        width: 100px;
+        height: 50px;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p, .ul, .ul_wrapper{
+        font-size: 1.5rem;
+    }
+  }
+  @media only screen and (max-width: 321px) {
+    .content{
+        width: 100%;
+    }
+    .bloc-tabs{
+        gap: 0px;
+        padding: 0;
+    }
+    .tabs{
+        width: 100px;
+        height: 50px;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+  }
+  hr{
+    width: 100%;
+    color: yellow;
+  }
+  .list_wrapper_header {
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+  }

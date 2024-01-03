@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  height: 100%;
+  display: block;
+  background: #F5F5F5;
+}
+.App2 {
+  text-align: center;
+  height: 100%;
+  display: block;
+  background: #282c34;  
+}
+.loader{
+  margin: 25% auto;
+  width: 500px;
+  height: 500px;
 }
 
 .App-logo {

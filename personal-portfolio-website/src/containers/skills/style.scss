@@ -1,3 +1,49 @@
+.skills2{
+    .skills_content-wrapper{
+        &_inner-content{
+
+            &_category-text{
+                color: #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+            }
+            &_category-text::before, &_category-text::after {
+
+                background-color: #FFFFFF;
+            }
+            div{
+                .progressbar-wrapper{
+                    p{
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+.skills3{
+    .skills_content-wrapper{
+
+
+        &_inner-content{
+
+            &_category-text{
+                color: #333333;
+                border-bottom: 2px solid #333333;
+            }
+            &_category-text::before, &_category-text::after {
+
+                background-color: #333333;
+            }
+            div{
+                .progressbar-wrapper{
+                    p{
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+}
 .skills{
     &_content-wrapper{
         display: flex;
@@ -9,7 +55,6 @@
             text-align: start;
             &_category-text{
                 display: inline-block;
-                color: #333333;
                 font-size: 22px;
                 font-weight: 700;
                 line-height: 1rem;
@@ -17,7 +62,6 @@
                 position: relative;
                 text-transform: uppercase;
                 padding: 5px 10px;
-                border-bottom: 2px solid #333333;
                 margin-bottom: 10px;
             }
             &_category-text::before, &_category-text::after {
@@ -25,7 +69,6 @@
                 content: "";
                 width: 2px;
                 height: 5px;
-                background-color: #333333;
                 bottom: -1px;
             }
             &_category-text::before{
@@ -43,7 +86,6 @@
                         margin: 0 0 10px;
                         font-weight: 500;
                         text-transform: uppercase;
-                        color: #333333;
                     }
                 }
             }

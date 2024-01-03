@@ -7,10 +7,7 @@ import About from './containers/about';
 import Home from './containers/home';
 import NavBar from './components/navBar';
 import FadeLoader from 'react-spinners/FadeLoader';
-import {HashLink} from 'react-router-hash-link';
-import Aos from 'aos';
-import {Provider,connect, useSelector} from 'react-redux'
-import store from './redux/store';
+import { useSelector} from 'react-redux'
 // import {loadFull} from "tsparticles";
 import { useState,useEffect } from 'react';
 function getRandomInt(min, max) {
@@ -18,10 +15,10 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function App() {
+function Main2() {
   const theme = useSelector(state => state.theme)
-  // const handleInit = async (main) => {
-  //   await loadFull(main)
+  // const handleInit = async (Main2) => {
+  //   await loadFull(Main2)
   // }
   const [loading, setLoading] = useState(false)
   useEffect(()=>{
@@ -32,7 +29,7 @@ function App() {
   },[])
   return (
     <>
-    <div className={theme === 1 ? "App" : "App2"}>
+    <div className={theme === 1 ? "Main2" : "Main22"}>
       {
         loading ? <FadeLoader color={"black"} loading={loading}
         // aria-label="Loading Spinner"
@@ -57,4 +54,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main2;
