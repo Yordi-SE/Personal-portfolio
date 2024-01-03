@@ -7,10 +7,7 @@ import About from './containers/about';
 import Home from './containers/home';
 import NavBar from './components/navBar';
 import FadeLoader from 'react-spinners/FadeLoader';
-import {HashLink} from 'react-router-hash-link';
-import Aos from 'aos';
 import {Provider,connect, useSelector} from 'react-redux'
-import store from './redux/store';
 // import {loadFull} from "tsparticles";
 import { useState,useEffect } from 'react';
 function getRandomInt(min, max) {

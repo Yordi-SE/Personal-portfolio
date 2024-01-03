@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import {FaBars, FaReact} from 'react-icons/fa';
+import {FaBars} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import {HiX} from 'react-icons/hi';
 import './style.scss';
 import image from "../../images/image4.jpg";
 import {HashLink} from 'react-router-hash-link';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import theme_action from "../../redux/action";
 
@@ -50,7 +49,7 @@ function NavBar() {
       <nav className={theme === 1 ? "navbar1 navbar2" : "navbar1 navbar3"}>
         <div className="navbar1_container">
             <Link className="navbar1_container_logo" to={'/Personal-portfolio'}>
-                <img src="./image4.jpg" width="30px"/>
+                <img src={image} width="30px"/>
             </Link>
         </div>
         <ul className={`navbar1_container_menu ${toggleIcon ? "active": ''}`}>

@@ -1,11 +1,7 @@
 import React from "react";
 import ParticlesContainer from '../../utils/particles';
-import { useEffect } from 'react';
 import "./styles.scss"
-import { useNavigate } from "react-router-dom";
 import {Animate} from "react-simple-animate";
-import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.0/+esm";
-import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.0/+esm";
 import { HashLink } from "react-router-hash-link";
 
 
