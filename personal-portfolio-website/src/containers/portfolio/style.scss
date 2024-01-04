@@ -1,4 +1,5 @@
 .portfolio_content{
+    overflow-x: hidden;
         &_cards{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -6,7 +7,6 @@
             gap: 4rem;
             margin: 20px;
             &_item{
-                height: 366px;
                 cursor: pointer;
                 position: relative;
                 border: 1px solid #333333;
@@ -78,6 +78,9 @@
             grid-auto-rows: auto;
             gap: 4rem;
             margin: 20px;
+            &_item{
+                height: 320px;
+            }
         }
     }
 }
@@ -89,6 +92,9 @@
             grid-auto-rows: auto;
             gap: 4rem;
             margin: 20px;
+            &_item{
+                height: 366px;
+            }
         }
     }
 }

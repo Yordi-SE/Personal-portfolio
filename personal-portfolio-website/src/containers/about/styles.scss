@@ -1,4 +1,5 @@
 .about_content{
+    overflow-x: hidden;
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -187,12 +188,12 @@
             }
         
         }
-        &_servicesWrapper{
-            &_innerContent{
-                width: 200px;
-            height: 200px;
-            }
+        .about_content_servicesWrapper,.overlay2{
+            min-width: 200px;
+            min-height: 200px;
+
         }
     }
+
 
 }

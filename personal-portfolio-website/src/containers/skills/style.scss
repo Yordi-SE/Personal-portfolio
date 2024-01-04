@@ -45,6 +45,7 @@
     }
 }
 .skills{
+    overflow-x: hidden;
     &_content-wrapper{
         display: flex;
         padding: 20px;

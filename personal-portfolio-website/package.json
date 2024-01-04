@@ -70,6 +70,7 @@
   },
   "devDependencies": {
     "@chakra-ui/react": "^2.8.2",
+    "@emailjs/browser": "^3.11.0",
     "aos": "^2.3.4",
     "gh-pages": "^6.1.0",
     "react-redux": "^9.0.4",

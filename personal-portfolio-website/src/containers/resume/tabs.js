@@ -3,7 +3,6 @@ import React from 'react';
 import './style.css'
 import Aos from "aos";
 import 'aos/dist/aos.css';
-import {Animate} from 'react-simple-animate';
 import { useSelector } from "react-redux";
 
 function Tabs() {

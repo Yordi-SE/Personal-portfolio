@@ -6,6 +6,7 @@
     background-color: #282828;
 }
 .countainer {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 
@@ -109,6 +110,10 @@ button {
     left: 0; /* Starting position */
     animation: slideLeft 2s cubic-bezier(0.4, 0, 0.2, 1) 1; /* Use the defined keyframes, duration, timing function, and repetition */
   }
+  .list_wrapper_header {
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+  }
   
   /* Define the animation keyframes */
   @keyframes slideLeft {
@@ -123,6 +128,7 @@ button {
     .content {
         width: 90%;
     }
+
     .ul_wrapper{
         flex-direction: column;
     }
@@ -145,6 +151,9 @@ button {
     .content{
         width: 100%;
     }
+    .list_wrapper_header{
+        line-height: 25px;
+    }
     .bloc-tabs{
         gap: 0px;
         padding: 0;
@@ -156,12 +165,33 @@ button {
     .content h1 {
         font-size: 1.5rem;
     }
+    .list_wrapper, .list_wrapper2,.ul_wrapper, .ul_wrapper2{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
   }
-  hr{
-    width: 100%;
-    color: yellow;
-  }
-  .list_wrapper_header {
-    border-bottom: 2px solid white;
-    margin-bottom: 20px;
+
+
+  @media only screen and (max-width: 280px) {
+    .content{
+        width: 100%;
+        padding: 5px;
+    }
+    .bloc-tabs{
+        gap: 0px;
+        padding: 0;
+    }
+    .tabs{
+        width: 100px;
+        height: 50px;
+    }
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .list_wrapper, .list_wrapper2, .ul_wrapper, .ul_wrapper2{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
   }

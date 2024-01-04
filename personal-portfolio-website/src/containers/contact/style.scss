@@ -1,5 +1,5 @@
 .contact1{
-    padding-bottom: 21%;
+    overflow-x: hidden;
     width: 100%;
     .contact_content{
         padding: 20px;
@@ -84,7 +84,7 @@
         }
         .contact_content_form{
             margin-top: 30px;
-            &_controlswrapper{
+            .contact_content_form_controlswrapper{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
@@ -93,7 +93,7 @@
                     position: relative;
                     .inputName, .inputEmail, .inputDescription{
                         width: 100%;
-                        border: 2px solid #333333;
+                        border: 2px solid #f5f5f5;
                         padding: 16px 12px;
                         transition: all 0.5s ease;
                         position: relative;
@@ -121,7 +121,7 @@
                 }
 
             }
-            button {
+            input[type="submit"] {
                 cursor: pointer;
                 padding: 10px 70px;
                 font-size: 2rem;
@@ -151,21 +151,11 @@
         }
     }
 }
-@media only screen and (max-width: 768px){
-    .contact_content{
-        flex-direction: column;
-    }
-    .contact_content_form{
-        text-align: center;
-        &_controlswrapper{
-            grid-template-columns: repeat(1,1fr);
-        }
-        margin-bottom: 100px;
-    }
-}
+
 .contact{
+    overflow-x: hidden;
     width: 100%;
-    &_content{
+    .contact_content{
         padding: 20px;
         display: flex;
         align-items: center;
@@ -248,7 +238,7 @@
         }
         .contact_content_form{
             margin-top: 30px;
-            &_controlswrapper{
+            .contact_content_form_controlswrapper{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
@@ -285,7 +275,7 @@
                 }
 
             }
-            button {
+            input[type="submit"] {
                 cursor: pointer;
                 padding: 10px 70px;
                 font-size: 2rem;
@@ -316,13 +306,104 @@
     }
 }
 @media only screen and (max-width: 768px){
-    .contact_content{
-        flex-direction: column;
-    }
-    .contact_content_form{
-        text-align: center;
-        &_controlswrapper{
-            grid-template-columns: repeat(1,1fr);
+    .contact, .contact1{
+        .contact_content{
+            flex-direction: column;
         }
+        .contact_content{
+            .contact_content_form{
+                text-align: center;
+                .contact_content_form_controlswrapper{
+                    grid-template-columns: repeat(1,1fr);
+                }
+                margin-bottom: 100px;
+            }
+            .div1 {
+                .map {
+                    width: 250px;
+                }
+            }
+        }
+    
     }
+
 }
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer a img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+  }
+  .links1{
+    font-size: 30px;
+    color: #fff;
+  }
+  .links2{
+    font-size: 30px;
+    color: #111;
+  }
+
+
+  .footer-icons {
+    display: flex;
+    justify-content: space-between;
+    height: 5vw;
+    max-height: 15%;
+    min-height: 25px;
+    width: 25%;
+    margin-bottom: 2vw;
+    min-width: 200px;
+  }
+.socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  .socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .socialIcons a i {
+    font-size: 1.5em;
+    opacity: 0.9;
+  }
+  .socialIcons a:hover {
+    transition: 0.5s;
+  }
+  .socialIcons a:hover i {
+    transition: 0.5s;
+  }
+  .socialIcons1 a{
+    background-color: white;
+
+  }
+  .socialIcons1 a i{
+    color: black;
+  }
+  .socialIcons1 a:hover i{
+    color: white;
+  }
+  .socialIcons1 a:hover{
+    background-color: #111;
+  }
+  .socialIcons2 a{
+    background-color: black;
+
+  }
+  .socialIcons2 a i{
+    color: white;
+  }
+  .socialIcons2 a:hover i{
+    color: black;
+  }
+  .socialIcons2 a:hover{
+    background-color: #fff;
+  }
