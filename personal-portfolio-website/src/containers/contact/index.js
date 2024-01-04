@@ -23,9 +23,6 @@ function Contact() {
   const personalDetails = [
     {
       value: "Addis Ababa, Ethiopia",
-    },
-    {
-      value: "lemmaworkyordanos@gmail.com",
     }
   ]
   const theme = useSelector(state => state.theme)
@@ -66,7 +63,7 @@ function Contact() {
 }
           </ul>
         {isLoaded ? 
-      <div data-aos="fade-right">
+      <div>
 
       <GoogleMap className="map" 
         center={{ lat: 9.039457048012395, lng: 38.763700926899354 }}

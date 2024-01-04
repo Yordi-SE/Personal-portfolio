@@ -44,8 +44,13 @@ function App() {
         <Resume/>
         <About/>
         <Contact/>
+        <div className={theme === 1 ?  "copyright1" : "copyright"}>
+         Yordanos Lemmawork &copy; 2024
+      </div>
         </>
+
       }
+
     </div>
 
     </>

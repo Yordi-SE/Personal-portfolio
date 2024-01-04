@@ -50,3 +50,11 @@
     transform: rotate(360deg);
   }
 }
+.copyright{
+  color: #F5F5F5;
+  font-size: 20px;
+}
+.copyright1{
+  color: #282c34;
+  font-size: 20px;
+}
