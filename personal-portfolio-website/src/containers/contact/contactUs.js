@@ -4,20 +4,43 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import './style.scss';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactUs = () => {
+  const notify = () => toast.success('message sent successfully!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
+  const notify2 = () => toast.error('failed! please try again later', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    e.target.reset()
-
     emailjs.sendForm('service_9ojfmz5', 'template_0mlbtd1', form.current, '3f07KRNZ5e9uexiae')
       .then((result) => {
           console.log(result.text);
+          notify();
       }, (error) => {
           console.log(error.text);
+          notify2();
       });
+      e.target.reset()
   };
   useEffect(() => {
     Aos.init({duration: 2000});
@@ -45,7 +68,18 @@ const ContactUs = () => {
     </div>
       <input type="submit" value="Send" data-aos="fade-left"/>
     </form>
-
+    <ToastContainer
+      position="top-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+/>
     </div>
   );
 };
