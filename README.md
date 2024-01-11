@@ -1,8 +1,8 @@
-Personal Portfolio Website
-Overview
+**Personal Portfolio Website**
+**Overview**
 Welcome to my personal portfolio website repository! This project serves as an interactive and dynamic showcase of my skills, projects, and professional journey. The portfolio is designed to provide visitors with a user-friendly experience while highlighting my technical proficiency and creativity.
 
-Features
+**Features**
 Responsive Design:
 
 The portfolio is crafted with a responsive design, ensuring optimal viewing across various devices and screen sizes.
@@ -29,16 +29,3 @@ React.js (v18.2.0): Core framework for building the frontend.
 Redux (v5.0.1) and React-Redux (v9.0.4): Global state management for a seamless user experience.
 tsparticles (v2.12.0): Powers particle animations in the background.
 [List other significant libraries and dependencies from your project's package.json file.]
-Getting Started
-Clone the Repository:
-git clone https://github.com/your-username/portfolio-website.git
-cd portfolio-website
-
-Install Dependencies:
-npm install
-
-Run the Application:
-npm start
-
-Open in Browser:
-Open your browser and visit http://localhost:3000 to view the portfolio locally.
