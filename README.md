@@ -1,10 +1,10 @@
-** # Personal Portfolio Website**
+# Personal Portfolio Website
 
-** ### Overview**
+### Overview
 
 Welcome to my personal portfolio website repository! This project serves as an interactive and dynamic showcase of my skills, projects, and professional journey. The portfolio is designed to provide visitors with a user-friendly experience while highlighting my technical proficiency and creativity.
 
-** ### Features**
+### Features
 
 Responsive Design:
 
