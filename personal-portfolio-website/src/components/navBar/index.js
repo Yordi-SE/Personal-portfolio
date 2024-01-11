@@ -24,20 +24,20 @@ function NavBar() {
         to: '#HOMEE'
     },
     {
-        label: "About",
-        to: '#ABOUT'
-    },
-    {
         label: "Skills",
         to: '#SKILLS'
+    },
+    {
+        label: "Portfolio",
+        to: '#PORTFOLIO'
     },
     {
         label: "Resume",
         to: '#RESUME'
     },
     {
-        label: "Portfolio",
-        to: '#PORTFOLIO'
+        label: "About",
+        to: '#ABOUT'
     },
     {
         label: "Contact",
