@@ -1,28 +1,32 @@
-**Personal Portfolio Website**
+**#Personal Portfolio Website**
 
-**Overview**
+**###Overview**
 
 Welcome to my personal portfolio website repository! This project serves as an interactive and dynamic showcase of my skills, projects, and professional journey. The portfolio is designed to provide visitors with a user-friendly experience while highlighting my technical proficiency and creativity.
 
-**Features**
+**###Features**
 
 Responsive Design:
 
 The portfolio is crafted with a responsive design, ensuring optimal viewing across various devices and screen sizes.
 
-Dynamic Content:
+###Dynamic Content:
 
 Interactive elements and dynamic content showcase my skills, projects, and other relevant information.
-Third-Party Service Integration:
+
+###Third-Party Service Integration:
 
 Utilizes third-party services for enhanced functionality, such as [mention specific services].
-Particle Animations:
+
+###Particle Animations:
 
 Engaging particle animations, powered by the tsparticles library, create a visually appealing background.
-Smooth Scrolling:
+
+###Smooth Scrolling:
 
 Implemented smooth scrolling for seamless navigation between sections, enhancing the overall user experience.
-Contact Form:
+
+###Contact Form:
 
 A contact section allows visitors to get in touch directly through the website, utilizing the @emailjs/browser library for seamless email functionality.
 Animations on Scroll (AOS):
