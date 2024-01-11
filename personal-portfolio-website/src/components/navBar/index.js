@@ -21,7 +21,7 @@ function NavBar() {
   const data = [
     {
         label: "Home",
-        to: '#HOME'
+        to: '#HOMEE'
     },
     {
         label: "About",

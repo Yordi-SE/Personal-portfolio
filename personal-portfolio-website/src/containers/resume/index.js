@@ -5,7 +5,7 @@ import JustifiedExample from './tabs'
 
 function Resume() {
   return (
-    <div>
+    <div id="RESUME">
       <section>
         <PageHeaderContent headerText={"My Resume"} icon={<BsInfoCircleFill size={40}/>}/>
       </section>
